@@ -130,8 +130,13 @@ app = Flask(__name__)
 
 # render home page
 
+@app.route('/')
+def login():
+    title='कृषि-GYAAN-login'
+    return render_template('login.html',title=title)
 
-@ app.route('/')
+
+@app.route('/home')
 def home():
     title = 'कृषि-GYAAN-home'
     return render_template('index.html', title=title)
@@ -139,7 +144,7 @@ def home():
 # render crop recommendation form page
 
 
-@ app.route('/crop-recommend')
+@app.route('/crop-recommend')
 def crop_recommend():
     title = 'कृषि-GYAAN - Crop Recommendation'
     return render_template('crop.html', title=title)
@@ -147,7 +152,7 @@ def crop_recommend():
 # render fertilizer recommendation form page
 
 
-@ app.route('/fertilizer')
+@app.route('/fertilizer')
 def fertilizer_recommendation():
     title = 'कृषि-GYAAN - Fertilizer Suggestion'
 
@@ -165,7 +170,7 @@ def fertilizer_recommendation():
 # render crop recommendation result page
 
 
-@ app.route('/crop-predict', methods=['POST'])
+@app.route('/crop-predict', methods=['POST'])
 def crop_prediction():
     title = 'कृषि-GYAAN - Crop Recommendation'
 
@@ -194,7 +199,7 @@ def crop_prediction():
 # render fertilizer recommendation result page
 
 
-@ app.route('/fertilizer-predict', methods=['POST'])
+@app.route('/fertilizer-predict', methods=['POST'])
 def fert_recommend():
     title = 'कृषि-GYAAN- Fertilizer Suggestion'
 
