@@ -153,7 +153,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 
 <body>
-
+	<div class="alan-btn"></div>
+     
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top" style="background-color: #1C00ff00;">
 		<div class="container">
@@ -179,6 +180,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="{{ url_for('disease_prediction') }}">Disease</a>
+
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{{ url_for('disease_prediction') }}">Disease</a>
+
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="file:///C:/Users/dell/OneDrive/Desktop/bot.html" target="_blank">Voice</a>
 					</li>
 				</ul>
 			</div>
@@ -223,7 +232,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			new google.translate.TranslateElement("myid")
 			}
 			</script>
-			
+
+
 		</div>
 	</footer>
 	<!-- //footer -->
@@ -231,6 +241,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- move top icon -->
 	<a href="#home" class="move-top text-center"></a>
 	<!-- //move top icon -->
+	<script type="text/javascript"
+			src="https://studio.alan.app/web/lib/alan_lib.min.js"></script>
+		   <script>
+			 var alanBtnInstance = alanBtn({
+			   key: "699537f8c003ce4fcb67d7d3d17555972e956eca572e1d8b807a3e2338fdd0dc/stage",
+			   onCommand: function (commandData) {
+				 if (commandData.command === "go:back") {
+				   //call client code that will react on the received command
+				 }
+			   },
+			   rootEl: document.getElementById("alan-btn"),
+			 });
+		   </script>
 </body>
 
 </html>
